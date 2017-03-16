@@ -1,62 +1,29 @@
-// import ApiRequest from './ApiRequest';
-//
-// class App {
-//   constructor() {
-//     this.apirequest = new ApiRequest();
-//   }
-// }
-//
-// document.addEventListener("DOMContentLoaded", (event) => {
-//   new App();
-// });
-
-
+import { nameDisplay } from './DisplayName'
 
 const url = 'http://swapi.co/api/people/?format=json';
-let httpRequest;
-makeRequest();
 
-function makeRequest () {
-  httpRequest = new XMLHttpRequest();
-  httpRequest.onreadystatechange = responseMethod;
-  httpRequest.open('GET', url);
-  httpRequest.send();
-}
+fetch(url)
+  .then((response)=>{
+  if (!response.ok) {
+    throw Error(response.statusText)
+  } else {
+    return response.json();
+}})
+  .then((response) => {
+    responseHandler(response);
+});
 
-function responseMethod () {
-  if (httpRequest.readyState ===4) {
-    if(httpRequest.status === 200) {
-      responseHandler(httpRequest.responseText)
-    }
-  }
-}
-
-
-function responseHandler(responseText){
-  let response = JSON.parse(responseText);
+function responseHandler(response) {
   let chars = response.results;
   console.log(chars);
 
-  let charNames = chars.map(function(char){
+  //get and display names
+  let charNames = chars.map(function (char) {
     return char.name
   });
-
-  let destination = document.querySelector(".char-name");
-
+  nameDisplay(charNames);
   console.log(charNames);
 
-  function nameDisplay() {
-    for(let i=0; i < charNames.length; i++){
-      let node = document.createElement("span");
-      let textnode = document.createTextNode(charNames[i]);
-      node.appendChild(textnode);
-      destination.appendChild(node);
-
-      console.log(charNames[i])
-
-
-    }
-  }
-  nameDisplay()
+  //
 
 }
