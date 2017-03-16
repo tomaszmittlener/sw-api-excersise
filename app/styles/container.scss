@@ -1,0 +1,62 @@
+section {
+  width: auto;
+  height: 50rem;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .main-container {
+    background: black;
+    border: 0.2rem solid yellow;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2rem;
+      color: yellow;
+      padding: 1rem;
+    }
+
+    .info-box {
+      width: 20rem;
+      margin: 1rem;
+      background: black;
+      border: 0.2rem solid yellow;
+      border-radius: 1rem;
+      color: yellow;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+
+      h2 {
+        text-decoration: underline;
+      }
+
+
+      span {
+        font-weight: bold;
+        padding: 0.5rem;
+      }
+
+
+      .char-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+    }
+
+  }
+}
