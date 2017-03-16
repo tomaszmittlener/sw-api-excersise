@@ -1,3 +1,17 @@
+// import ApiRequest from './ApiRequest';
+//
+// class App {
+//   constructor() {
+//     this.apirequest = new ApiRequest();
+//   }
+// }
+//
+// document.addEventListener("DOMContentLoaded", (event) => {
+//   new App();
+// });
+
+
+
 const url = 'http://swapi.co/api/people/?format=json';
 let httpRequest;
 makeRequest();

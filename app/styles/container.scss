@@ -1,3 +1,5 @@
+@import './global';
+
 section {
   width: auto;
   height: 50rem;
@@ -8,29 +10,30 @@ section {
 
 
   .main-container {
-    background: black;
-    border: 0.2rem solid yellow;
+    //border: 0.2rem solid $font-color;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1000;
+
 
     .logo {
+      font-family: 'STARWARS', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-transform: uppercase;
-      font-weight: bold;
-      font-size: 2rem;
-      color: yellow;
+      font-size: 4rem;
+      color: $font-color;
       padding: 1rem;
     }
 
     .info-box {
+      font-family: sans-serif;
       width: 20rem;
       margin: 1rem;
-      background: black;
-      border: 0.2rem solid yellow;
+      border: 0.2rem solid $font-color;
       border-radius: 1rem;
       color: yellow;
       display: flex;
@@ -39,7 +42,8 @@ section {
       padding: 1rem;
 
       h2 {
-        text-decoration: underline;
+        color: white;
+
       }
 
 

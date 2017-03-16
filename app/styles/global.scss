@@ -4,3 +4,13 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+$font-color: #ff0;
+
+
+@font-face {font-family:"STARWARS";
+  src:  url("../fonts/STARWARS/STARWARS.eot?") format("eot"),
+        url("../fonts/STARWARS/STARWARS.woff") format("woff"),
+        url("../fonts/STARWARS/STARWARS.ttf") format("truetype"),
+        url("../fonts/STARWARS/STARWARS.svg") format("svg");
+        font-weight:normal;font-style:normal;}
