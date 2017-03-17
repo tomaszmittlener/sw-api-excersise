@@ -11,7 +11,7 @@ export const vehicleResponseHandler = (response) => {
 };
 
 const vechDisplay = (vechModels) => {
-  for (let i = 0; i < vechModels.length-7; i++) {
+  for (let i = 0; i < vechModels.length-5; i++) {
     let destination = document.querySelector(".vech-name");
     let node = document.createElement("span");
     let textNode = document.createTextNode(vechModels[i]);
